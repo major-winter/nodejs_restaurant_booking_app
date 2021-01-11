@@ -13,12 +13,12 @@ form.addEventListener('submit', (e) => {
   const numberOfAdults = document.querySelector('input[name=numberOfAdults]').value
   const numberOfChildren = document.querySelector('input[name=numberOfChildren]').value
 
-  fetch(`http://localhost:3001/booking?name=${userName}&email=${email}&phone_number=${phoneNumber}&date=${date}&num_of_adults=${numberOfAdults}&num_of_children=${numberOfChildren}`, {
+  fetch(`/booking?name=${userName}&email=${email}&phone_number=${phoneNumber}&date=${date}&num_of_adults=${numberOfAdults}&num_of_children=${numberOfChildren}`, {
     method: 'post'
   })
     .then(() => {
       form.reset()
-      window.location.href = 'http://localhost:3001/booked'
+      window.location.href = '/booked'
     })
     .catch(err => {
       console.log(err)
