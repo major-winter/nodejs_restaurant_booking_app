@@ -1,9 +1,9 @@
 .menu {
 	width: 60%;
 	margin: 0 auto;
-	background-color: rgba(255, 255, 255, 0.4);
+	background-color: rgba(255, 255, 255, 0.9);
 	margin-top: 1.2rem;
-	color: #fff;
+	color: rgba(184, 184, 184, 0.9);
 	border-radius: 0.5rem;
 	padding: 0.5rem;
 	animation-name: moveBottomUp;
@@ -25,7 +25,7 @@
 }
 
 p {
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 }
 
 h2 {
@@ -36,8 +36,6 @@ h2 {
 	0% {
 		opacity: 0;
 		transform: translateY(50px);
-	}
-	80% {
 	}
 
 	100% {

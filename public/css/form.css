@@ -4,8 +4,21 @@
 
 .contact-form {
 	position: relative;
-	top: 20%;
+	top: 5%;
 	/* background-color: #fff; */
+	animation-name: moveBottomUp;
+	animation-duration: 1s;
+}
+
+@keyframes moveBottomUp {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .contact-form h1 {
@@ -33,21 +46,55 @@
 	height: 2.5rem;
 }
 
+.form-input:nth-child(odd) {
+	animation-name: moveLeftRight;
+	animation-duration: 1s;
+}
+
+.form-input:nth-child(even) {
+	animation-name: moveRightLeft;
+	animation-duration: 1s;
+}
+
+@keyframes moveLeftRight {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes moveRightLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
 .form-input.textarea {
 	height: 100px;
 }
 
 .btn {
-  height: 40px;
-  border: 1px solid #2d99a4;
-  border-radius: .5rem;
-  cursor: pointer;
+	height: 40px;
+	border: 1px solid #2d99a4;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	font-size: 1.5rem;
 }
 
 .btn:hover {
-  background-color: #2d99a4;
-  box-shadow: 1px 1px 3px #000;
-  transform: translateY(-5px);
+	background-color: #2d99a4;
+	box-shadow: -2px 5px 10px rgb(31, 31, 31);
+	transform: translateY(-5px);
+	color: #fff;
 }
 
 ::placeholder {

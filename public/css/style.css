@@ -155,6 +155,8 @@ nav ul li a:hover {
 	background: #0e727b;
 	padding: 1.2rem 0.5rem;
 	text-align: center;
+	animation-name: moveBottomUp;
+	animation-duration: 0.5s;
 }
 
 .text-secondary {
@@ -164,6 +166,8 @@ nav ul li a:hover {
 	font-size: 30px;
 	margin-top: 10px;
 	padding: 1rem;
+	animation-name: moveBottomUp;
+	animation-duration: .9s;
 }
 
 .text-secondary a {
@@ -174,10 +178,23 @@ nav ul li a:hover {
 .text-secondary.sub {
 	background-color: #0e727b;
 	margin-top: 10px;
+	animation-name: moveBottomUp;
+	animation-duration: 1.2s;
 }
 
 .text-secondary.sub a {
 	color: #fff;
+}
+
+@keyframes moveBottomUp {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .center {
