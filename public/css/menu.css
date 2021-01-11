@@ -1,0 +1,38 @@
+.menu {
+	width: 60%;
+	margin: 0 auto;
+	background-color: rgba(255, 255, 255, 0.4);
+	margin-top: 1.2rem;
+	color: #fff;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+}
+
+.col-1-of-2-of-text li {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.row {
+	margin-bottom: 50px;
+}
+
+.row.sub-menu {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+p {
+	font-size: 1.2rem;
+}
+
+h2 {
+	color: rgb(2, 159, 173);
+}
+
+@media screen and (max-width: 560px) {
+	.menu {
+		width: 90%;
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/booking.css">
+  <script src="/js/booking.js" defer></script>
+  <script src="/js/app.js" defer></script>
+  <title>Booking</title>
+</head>
+
+<body>
+  {{>header}}
+  <div class="wrapper mt">
+    <div class="booking-form">
+      <form action="/booking" method="POST">
+        <h1>Booking Form</h1>
+        <div class="form-input">
+          <input type="text" placeholder="Your Name" name="name" required>
+          <input type="text" placeholder="Your Email" name='email' required>
+          <input type="text" placeholder="Your Phone Number" name="number" required>
+          <input type="date" name="date" required>
+          <input type="time" required>
+          <input type="text" placeholder="Number of adults" name="numberOfAdults" required>
+          <input type="text" placeholder="Number of children" name="numberOfChildren">
+          <button class="btn reserve-btn" type="submit">Reserve a table</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
