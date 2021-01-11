@@ -44,12 +44,13 @@ app.get('/booking', (req, res) => {
 })
 
 app.get('/booked', (req, res) => {
-  const { name, email, phone_number: phone, date } = bookingInfo
+  const { name, email, phone_number: phone, date, time } = bookingInfo
   res.render('booked', {
     name,
     email,
     phone,
-    date
+    date,
+    time
   })
 })
 

@@ -10,10 +10,11 @@ form.addEventListener('submit', (e) => {
   const email = document.querySelector('input[name=email]').value
   const phoneNumber = document.querySelector('input[name=number]').value
   const date = document.querySelector('input[name=date]').value
+  const time = document.querySelector('input[name=time]').value
   const numberOfAdults = document.querySelector('input[name=numberOfAdults]').value
   const numberOfChildren = document.querySelector('input[name=numberOfChildren]').value
 
-  fetch(`/booking?name=${userName}&email=${email}&phone_number=${phoneNumber}&date=${date}&num_of_adults=${numberOfAdults}&num_of_children=${numberOfChildren}`, {
+  fetch(`/booking?name=${userName}&email=${email}&phone_number=${phoneNumber}&date=${date}&time=${time}&num_of_adults=${numberOfAdults}&num_of_children=${numberOfChildren}`, {
     method: 'post'
   })
     .then(() => {
