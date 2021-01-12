@@ -5,8 +5,9 @@ const path = require('path')
 const app = express()
 app.set('view engine', 'hbs')
 
+
 const publicDir = path.join(__dirname, '../public')
-const viewPath = path.join(__dirname, '../templates')
+const viewPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
 hbs.registerPartials(partialsPath)
 
@@ -17,7 +18,9 @@ app.use(express.json())
 
 
 app.get('/', (req, res) => {
-  res.render('index')
+  res.render('index', {
+    text: 'home'
+  })
 })
 
 app.get('/contact', (req, res) => {

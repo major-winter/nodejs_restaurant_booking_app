@@ -19,12 +19,11 @@ html {
 
 body {
 	font-family: 'Times New Roman', Times, serif;
-	height: 100%;
+	min-height: 100%;
 }
 
 main {
 	position: relative;
-	/* height: calc(100vh - 50px); */
 }
 
 .wrapper {
@@ -32,9 +31,10 @@ main {
 	margin: 0 auto;
 	position: relative;
 	top: 50px;
-	height: 100px;
+	
 	z-index: 10;
 }
+
 .header-logo {
 	display: flex;
 	justify-content: space-between;
@@ -167,7 +167,7 @@ nav ul li a:hover {
 	margin-top: 10px;
 	padding: 1rem;
 	animation-name: moveBottomUp;
-	animation-duration: .9s;
+	animation-duration: 0.9s;
 }
 
 .text-secondary a {
