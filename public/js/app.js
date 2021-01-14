@@ -2,11 +2,11 @@ const hamburger = document.querySelector('.hamburger')
 const sidebar = document.querySelector('.sidebar1')
 const html = document.querySelector('html')
 
-// $('.slider').slick({
-//   autoplay: true,
-//   autoplaySpeed: 5000,
-//   slidesToShow: 1
-// })
+$('.slider').slick({
+  autoplay: true,
+  autoplaySpeed: 1000,
+  slidesToShow: 1
+})
 
 // $(".slider")[0].slick.setPosition();
 

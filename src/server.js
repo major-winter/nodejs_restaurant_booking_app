@@ -63,7 +63,7 @@ app.get('*', (req, res) => {
   res.redirect('/')
 })
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 5001
 
 app.listen(port, () => {
   console.log(`Server is online on port ${port}`)

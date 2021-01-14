@@ -1,42 +1,46 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
 
-/* html {
-	background-image: linear-gradient(45deg, rgba(29, 29, 29, 0.3), rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.7)),
-	url(../img/nick-karvounis-Ciqxn7FE4vE-unsplash.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	min-height: 100%;
-} */
-html {
-  box-sizing: border-box;
-}
-
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	user-select: none;
 }
 
 body {
-	font-family: 'Lato', Times, serif;
-	min-height: 100%;
+	font-family: 'Lato', sans-serif;
+	padding: 10px
 }
 
-.header {
+main {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.header .container {
 	background-image: linear-gradient(
 			45deg,
 			rgba(29, 29, 29, 0.3),
 			rgba(29, 29, 29, 0.5),
 			rgba(29, 29, 29, 0.7)
 		),
-		url(../img/nick-karvounis-Ciqxn7FE4vE-unsplash.jpg);
+		url(../img/andrew-seaman-large.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	height: 500px;
+}
+
+.container {
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container-footer {
+	max-width: 1600px;
+	margin: 0 auto;
 }
 
 .wrapper.navbar {
@@ -44,12 +48,6 @@ body {
 	/* margin: 0 auto; */
 	left: 50%;
 	transform: translateX(-50%);
-}
-
-main {
-	position: relative;
-	width: 90%;
-	margin: 0 auto;
 }
 
 .wrapper {
@@ -153,10 +151,15 @@ main {
 	animation-name: moveBottomUp;
 	animation-duration: 1s;
 	margin-bottom: 100px;
+	margin-top: 50px;
+	position: relative;
 }
 
-.about-section__text {
-	margin: 100px 0;
+.about-section__text,
+.meet-section__text {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .about-section__img img,
@@ -174,12 +177,12 @@ main {
 }
 
 .slider-section {
-	display: block;
-	/* display: flex;
+	/* display: block; */
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 100px; */
+	gap: 100px;
 }
 
 .slider-section-box {
@@ -190,7 +193,7 @@ main {
 .slider {
 	width: 100%;
 	max-width: 500px;
-	overflow: hidden;
+	margin: 0 auto;
 }
 
 .slider img {
@@ -199,6 +202,13 @@ main {
 	height: auto;
 	margin: 0 auto;
 	outline: none;
+}
+
+.copyright {
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
 }
 
 nav ul {
@@ -271,30 +281,50 @@ nav ul li a:hover {
 	color: #fff;
 }
 
+.col-1-of-3 {
+	margin-top: 50px;
+}
 .col-1-of-3 img {
 	width: 120px;
 	height: 100px;
 }
 
+.col {
+	margin-top: 100px;
+}
+
+.col h3 {
+	font-size: 2.5rem;
+}
+
 /* Footer */
 .footer {
-	height: 900px;
+	height: 500px;
 	background-color: #000;
 	margin-top: 50px;
-	max-width: 400px;
-	width: 100%;
+	max-width: 1920px;
+	/* width: 100%; */
 }
 
 .footer .row {
 	color: #fff;
 	height: 250px;
 	text-align: center;
+	/* padding: 10px; */
 }
 
 .footer .row:nth-of-type(2) {
 	display: grid;
-	grid-template-columns: repeat(3, 33.33%);
+	grid-template-columns: repeat(3, 33%);
 	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.hamburger {
+	display: none;
 }
 
 @keyframes moveBottomUp {
@@ -306,14 +336,6 @@ nav ul li a:hover {
 		opacity: 1;
 		transform: translateY(0);
 	}
-}
-
-.center {
-	text-align: center;
-}
-
-.hamburger {
-	display: none;
 }
 
 @media screen and (max-width: 1024px) {
@@ -331,6 +353,16 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 768px) {
+
+	.header .container {
+		background-image: linear-gradient(
+				45deg,
+				rgba(29, 29, 29, 0.3),
+				rgba(29, 29, 29, 0.5),
+				rgba(29, 29, 29, 0.7)
+			),
+			url(../img/andrew-seaman.jpg);
+	}
 	.wrapper {
 		width: 90%;
 	}
@@ -400,7 +432,7 @@ nav ul li a:hover {
 	}
 
 	.hamburger span {
-		color: #026e78;
+		color: #fff;
 		line-height: 45px;
 	}
 
