@@ -4,8 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/form.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous" defer></script>
+
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous" defer></script>
+
+
   <script src="/js/app.js" defer></script>
   <title>Restaurant</title>
 </head>
@@ -13,7 +26,88 @@
 <body>
   {{>header}}
   <main>
-    <div class="wrapper index">
+    <section class="about-section">
+      <div class="about-section__text-box">
+        <div class="about-section__text">
+          <h1>About the villa</h1>
+          <p>A place where Chef Thierry would no longer be bound by the limitations of 5-star hotels or high-end
+            restaurants, where he’d previously worked. It would be a creative space to explore French gastronomy at his
+            own pace, in an environment designed to facilitate the best of what excellent ingredients could offer.
+            <br />
+            Always fascinated by Asia, Thierry found himself as F&B Director at a resort in Phan Thiet, an ultra-luxury
+            boutique resort. There he met Tina, his future wife, who was working there at the time.
+            <br />
+            When they moved to Saigon, Thierry found the opportunity to do what would have been nearly impossible in
+            France due to costs: purchase a beautiful villa and shape it into one of Vietnam’s most professional and
+            experienced fine dining restaurants.
+            <br />
+            La Villa has found incredible success after years of rigorous staff training and unrestrained exploration of
+            French fine cuisine.
+          </p>
+        </div>
+      </div>
+      <div class="about-section__img-box">
+        <div class="about-section__img">
+          <img src="https://www.lavilla-restaurant.com.vn/wp-content/uploads/2015/11/about-lavilla.jpg" alt="about-img"
+            loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="meet-section">
+      <div class="meet-section__img-box">
+        <div class="meet-section__img">
+          <img src="https://www.lavilla-restaurant.com.vn/wp-content/uploads/2015/11/thierry-headshot.jpg"
+            alt="The Chief img" loading="lazy">
+        </div>
+
+      </div>
+      <div class="meet-section__text-box">
+        <div class="meet-section__text">
+          <h1>About The chief</h1>
+          <p>On a grey day in France almost 20 years ago, Thierry entered a Vietnamese restaurant for the first time. He
+            was struck with a sense of curiosity. The space was exotic and brightly lit, a woman sang in Vietnamese on
+            the speaker, the cuisine was like nothing he’d seen before.
+            <br />
+            Inspired by the experience, Thierry soon began a 18-year culinary career.
+            Chef Thierry first entered the Michelin-star arena in 2003, when he was hired by famed chef Christian
+            Etienne at a restaurant of the same name in Avignon, a commune in Southern France. His next stop was a
+            Michelin restaurant in London.
+            <br />
+            Thierry then took his culinary skills back to France, then to Bora Bora, and
+            finally to Vietnam in 2008, where he worked with the 5-star ultra-luxury property for two years.
+            In 2010 he arrived in Ho Chi Minh City and opened La Villa with his wife,
+            Mrs. Tina Trang Pham.
+          </p>
+        </div>
+      </div>
+    </section>
+{{!-- 
+    <section class="slider-section">
+      <div>
+        <h1>Some pictures</h1>
+      </div>
+      <div class="slider-section-box">
+        <div class="slider">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1552566626-27844c37733b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
+              alt="">
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1030&q=80"
+              alt="">
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1521917441209-e886f0404a7b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
+              alt="">
+          </div>
+        </div>
+      </div>
+    </section> --}}
+    {{!-- <div class="wrapper index">
       <div class="content">
         <p class="text-primary">Try something new</p>
         <div>
@@ -28,8 +122,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> --}}
   </main>
+  {{>footer}}
+
 </body>
 
 </html>

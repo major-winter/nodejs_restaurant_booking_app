@@ -46,7 +46,6 @@ app.get('/booking', (req, res) => {
 
 app.get('/booked', (req, res) => {
   const { name, email, phone_number: phone, date, time } = bookingInfo
-  console.log(name)
   if (!name) {
     return res.redirect('/booking')
   }
@@ -57,10 +56,11 @@ app.get('/booked', (req, res) => {
     date,
     time
   })
+
 })
 
 app.get('*', (req, res) => {
-  res.send('Page not found')
+  res.redirect('/')
 })
 
 const port = process.env.PORT || 3001
