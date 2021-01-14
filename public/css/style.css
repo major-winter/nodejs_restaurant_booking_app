@@ -13,17 +13,13 @@ img {
 
 body {
 	font-family: 'Lato', sans-serif;
-	padding: 30px;
+	/* padding: 10px; */
 }
 
 main {
 	position: relative;
 	width: 90%;
 	margin: 0 auto;
-}
-
-.header {
-	border: 1px solid red;
 }
 
 .header-container {
@@ -38,16 +34,12 @@ main {
 	background-position: center;
 	background-size: cover;
 	height: 500px;
+	position: relative;
 }
 
 .container {
 	max-width: 1920px;
 	width: 100%;
-	margin: 0 auto;
-}
-
-.container-footer {
-	max-width: 1600px;
 	margin: 0 auto;
 }
 
@@ -96,6 +88,13 @@ main {
 	z-index: 1000;
 }
 
+.navbar {
+	position: relative;
+	top: 5%;
+	width: 90%;
+	margin: 0 auto;
+}
+
 .nav-links {
 	list-style-type: none;
 	display: flex;
@@ -119,7 +118,7 @@ main {
 	border-bottom: 1px solid #fff;
 }
 
-.sidebar1 {
+.mobile-navbar {
 	position: fixed;
 	z-index: 100;
 	background-color: #fff;
@@ -128,10 +127,10 @@ main {
 	right: -250px;
 	top: 0;
 	transition: right 0.4s ease;
-	background-color: red;
+	background-color: #000;
 }
 
-.sidebar1.show {
+.mobile-navbar.show {
 	right: 0;
 }
 
@@ -195,13 +194,6 @@ main {
 	height: auto;
 	margin: 0 auto;
 	outline: none;
-}
-
-.copyright {
-	background-color: #000;
-	color: #fff;
-	text-align: center;
-	padding: 10px 0;
 }
 
 nav ul {
@@ -292,10 +284,9 @@ nav ul li a:hover {
 
 /* Footer */
 .footer {
-	height: 500px;
+	height: 900px;
 	background-color: #000;
-	margin-top: 50px;
-	max-width: 1920px;
+	margin-top: 500px;
 	/* width: 100%; */
 }
 
@@ -306,10 +297,36 @@ nav ul li a:hover {
 	/* padding: 10px; */
 }
 
-.footer .row:nth-of-type(2) {
+.container-footer {
+	display: grid;
+	/* grid-template-columns: repeat(3, 33%); */
+	grid-template-rows: 300px 300px 300px;
+	text-align: center;
+	color: #fff;
+	grid-template-areas: 'row-1' 'row-2' 'row-3';
+	/* justify-items: center; */
+	align-items: center;
+}
+
+.row-1 {
+	grid-area: row-1;
+}
+
+.row-2 {
+	grid-area: row-2;
 	display: grid;
 	grid-template-columns: repeat(3, 33%);
+}
+
+.row-3 {
+	grid-area: row-3;
+}
+
+.copyright {
+	background-color: #000;
+	color: #fff;
 	text-align: center;
+	padding: 2rem 0;
 }
 
 .center {
@@ -318,6 +335,10 @@ nav ul li a:hover {
 
 .hamburger {
 	display: none;
+}
+
+.paragraph {
+	font-size: 1.5rem;
 }
 
 @keyframes moveBottomUp {
@@ -332,10 +353,6 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 1024px) {
-	.wrapper {
-		width: 90%;
-	}
-
 	.text-primary {
 		font-size: 2.5rem;
 	}
@@ -355,29 +372,34 @@ nav ul li a:hover {
 			),
 			url(../img/andrew-seaman.jpg);
 	}
-	.wrapper {
-		width: 90%;
-	}
-
-	.hamburger {
-		display: none;
-	}
 
 	.content {
 		top: 250px;
 		left: 5%;
 	}
+
+.footer {
+	min-height: 1500px;
+}
+
+.container-footer {
+	display: grid;
+	grid-template-rows: 300px 900px 300px;
+	/* text-align: center; */
+	color: #fff;
+	grid-template-areas: 'row-1' 'row-2' 'row-3';
+	align-items: center;
+}
+
+.row-2 {
+	grid-template-columns: 100%;
+}
 }
 
 @media screen and (max-width: 560px) {
-	.wrapper {
-		width: 100%;
-	}
-
 	.about-section,
 	.meet-section {
 		grid-template-columns: 100%;
-		/* grid-template-rows: repeat(2, 500px); */
 	}
 
 	.meet-section__text-box {
@@ -416,7 +438,6 @@ nav ul li a:hover {
 		position: absolute;
 		right: 0;
 		transition: right 0.4s ease;
-		/* background: #2d99a4; */
 		height: 45px;
 		width: 45px;
 		text-align: center;
@@ -429,19 +450,21 @@ nav ul li a:hover {
 	}
 
 	.hamburger.click {
-		right: 260px;
+		right: 250px;
+		z-index: 1000;
 	}
 
 	.hamburger.click span:before {
 		content: '\f00d';
-		color: #fff;
+		color: #000;
 	}
 
 	.nav-link a {
 		font-size: 0.9rem;
 	}
 
-	.hamburger {
-		display: block;
+	.grid-row {
+		grid-template-columns: 100%;
+		grid-template-rows: repeat(3, 200px);
 	}
 }

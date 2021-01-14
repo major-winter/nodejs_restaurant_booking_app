@@ -1,5 +1,5 @@
 const hamburger = document.querySelector('.hamburger')
-const sidebar = document.querySelector('.sidebar1')
+const mobileNavbar = document.querySelector('.mobile-navbar')
 const html = document.querySelector('html')
 
 $('.slider').slick({
@@ -13,11 +13,10 @@ $('.slider').slick({
 
 
 hamburger.addEventListener('click', () => {
- 
-  sidebar.classList.toggle('show')
+
+  mobileNavbar.classList.toggle('show')
   hamburger.classList.toggle('click')
   html.classList.toggle('modal')
-  console.log(hamburger)
 
 })
 
