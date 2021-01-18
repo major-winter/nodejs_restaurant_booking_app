@@ -18,9 +18,7 @@ app.use(express.json())
 
 
 app.get('/', (req, res) => {
-  res.render('index', {
-    text: 'home'
-  })
+  res.render('index')
 })
 
 app.get('/contact', (req, res) => {
