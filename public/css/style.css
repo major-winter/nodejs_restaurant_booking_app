@@ -8,7 +8,8 @@
 }
 
 img {
-	max-width: 100%;
+	/* max-width: 100%; */
+	max-width: 250px;
 }
 
 body {
@@ -39,6 +40,7 @@ main {
 	opacity: 0;
 	animation: fadeOut;
 	animation-duration: 1s;
+	z-index: 1;
 }
 
 .spinner {
@@ -226,7 +228,7 @@ main {
 
 .slider img {
 	max-width: 400px;
-	/* width: 100%; */
+	width: 100%;
 	height: auto;
 	margin: 0 auto;
 	outline: none;

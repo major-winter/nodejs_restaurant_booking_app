@@ -4,17 +4,9 @@ const html = document.querySelector('html')
 
 const opening = document.querySelector('.opening')
 
-
 document.addEventListener('DOMContentLoaded', () => {
   opening.classList.add('opening')
 })
-
-window.onload = () => {
-  setTimeout(() => {
-    opening.classList.add('closing')
-
-  }, 1000)
-}
 
 $('.slider').slick({
   autoplay: true,
@@ -22,17 +14,20 @@ $('.slider').slick({
   slidesToShow: 1
 })
 
-// $(".slider")[0].slick.setPosition();
-
-
-
 hamburger.addEventListener('click', () => {
-
+  console.log('clicked')
   mobileNavbar.classList.toggle('show')
   hamburger.classList.toggle('click')
   html.classList.toggle('modal')
-
 })
+
+window.onload = () => {
+  setTimeout(() => {
+    opening.classList.add('closing')
+  }, 1000)
+}
+
+
 
 
 
